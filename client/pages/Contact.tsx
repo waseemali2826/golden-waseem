@@ -77,17 +77,6 @@ export default function Contact() {
             <a className="rounded-md border border-border px-3 py-2 text-sm text-muted-foreground" href="'https://www.instagram.com/waseemali3145?igsh=YzljYTk1ODg3Zg==" >Instagram</a>
           </div>
 
-          <Button
-            onClick={() => window.open('https://www.instagram.com/waseemali3145?igsh=YzljYTk1ODg3Zg==', '_blank')}
-            size="sm"
-            variant="outline"
-            className="border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white transform hover:scale-105 transition-all duration-300 p-2"
-          >
-            <Instagram className="w-3 h-3 sm:w-4 sm:h-4" />
-          </Button>
-
-
-
           <div className="mt-6 rounded-xl border border-border bg-background/5 p-4 text-center">
             <p className="text-sm text-muted-foreground">Ready to work together? Let's discuss your next project and bring your ideas to life with cutting-edge technology and innovative solutions.</p>
           </div>
