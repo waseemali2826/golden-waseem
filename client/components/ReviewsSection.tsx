@@ -14,82 +14,92 @@ const REVIEWS = [
 ];
 
 export default function ReviewsSection() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
+  const rafRef = useRef<number | null>(null);
+  const pausedRef = useRef(false);
+  const hoverCounter = useRef(0);
+  const SPEED_PX_PER_SEC = 40; // scrolling speed
 
   useEffect(() => {
-    const root = containerRef.current;
-    if (!root) return;
-    const cards = Array.from(root.querySelectorAll<HTMLElement>(".review-card"));
-    if (!cards.length) return;
+    const el = scrollerRef.current;
+    if (!el) return;
 
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const el = entry.target as HTMLElement;
-          if (entry.isIntersecting) {
-            el.classList.add("opacity-100", "translate-y-0");
-            el.classList.remove("opacity-0", "translate-y-6");
-            obs.unobserve(el);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
+    // Force desktop-like continuous scrolling by duplicating content in DOM via rendering items twice
+    let last = performance.now();
 
-    cards.forEach((c) => {
-      c.classList.add("opacity-0", "translate-y-6", "transition-all", "duration-700", "ease-out");
-      obs.observe(c);
-    });
+    function step(now: number) {
+      const dt = now - last;
+      last = now;
+      if (!pausedRef.current) {
+        // move scroll
+        el.scrollLeft += (SPEED_PX_PER_SEC * dt) / 1000;
+        const half = el.scrollWidth / 2;
+        if (el.scrollLeft >= half) {
+          // loop back seamlessly
+          el.scrollLeft -= half;
+        }
+      }
+      rafRef.current = requestAnimationFrame(step);
+    }
 
-    return () => obs.disconnect();
+    rafRef.current = requestAnimationFrame(step);
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, []);
 
-  const firstRow = REVIEWS.slice(0, 5);
-  const secondRow = REVIEWS.slice(5, 10);
+  function pause() {
+    hoverCounter.current += 1;
+    pausedRef.current = true;
+  }
+  function resume() {
+    hoverCounter.current = Math.max(0, hoverCounter.current - 1);
+    if (hoverCounter.current === 0) pausedRef.current = false;
+  }
+
+  // duplicate items for seamless scroll
+  const items = [...REVIEWS, ...REVIEWS];
 
   return (
-    <section data-animate className="w-full py-12 bg-background/5">
-      <div className="w-full px-6">
-        <div className="rounded-2xl border border-border bg-card/60 p-8 w-full">
+    <section className="w-full py-12">
+      <div className="max-w-[1400px] mx-auto px-4">
+        <div className="rounded-2xl border border-border bg-card/60 p-8">
           <h2 className="font-serif text-2xl text-primary text-center">What people say — Project reviews</h2>
           <p className="mt-2 text-center text-muted-foreground">Feedback specific to delivered projects and outcomes</p>
 
-          <div ref={containerRef} className="mt-8 grid gap-6 w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full">
-              {firstRow.map((r, i) => (
-                <article key={i} className="review-card rounded-xl border border-border bg-card p-4 shadow-sm">
-                  <div className="flex flex-col">
-                    <div className="font-semibold text-sm text-foreground">{r.name} <span className="text-xs text-muted-foreground">• {r.role}</span></div>
-                    <p className="mt-3 text-sm text-muted-foreground">{r.text}</p>
-                    <div className="mt-3 flex items-center gap-1" aria-hidden>
-                      {Array.from({ length: 5 }).map((_, si) => (
-                        <svg key={si} className={`h-4 w-4 ${si < r.rating ? 'text-primary' : 'text-muted-foreground/60'}`} viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.173c.969 0 1.371 1.24.588 1.81l-3.375 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118L10 15.347l-3.376 2.455c-.784.57-1.838-.197-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.636 9.393c-.783-.57-.38-1.81.588-1.81h4.173a1 1 0 00.95-.69L9.049 2.927z" />
-                        </svg>
-                      ))}
-                    </div>
+          <div
+            ref={scrollerRef}
+            className="mt-8 flex gap-6 overflow-hidden no-scrollbar"
+            aria-label="Project reviews carousel"
+          >
+            {items.map((r, i) => (
+              <article
+                key={i}
+                onMouseEnter={pause}
+                onMouseLeave={resume}
+                onFocus={pause}
+                onBlur={resume}
+                className="review-card min-w-[300px] max-w-[320px] rounded-xl border border-border bg-card p-5 shadow hover:shadow-lg transition-shadow"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-semibold text-sm text-foreground">{r.name}</div>
+                    <div className="text-xs text-muted-foreground">{r.role}</div>
                   </div>
-                </article>
-              ))}
-            </div>
+                  <div className="flex items-center gap-1" aria-hidden>
+                    {Array.from({ length: 5 }).map((_, si) => (
+                      <svg key={si} className={`h-4 w-4 ${si < r.rating ? 'text-primary' : 'text-muted-foreground/50'}`} viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.173c.969 0 1.371 1.24.588 1.81l-3.375 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118L10 15.347l-3.376 2.455c-.784.57-1.838-.197-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.636 9.393c-.783-.57-.38-1.81.588-1.81h4.173a1 1 0 00.95-.69L9.049 2.927z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full">
-              {secondRow.map((r, i) => (
-                <article key={i + 5} className="review-card rounded-xl border border-border bg-card p-4 shadow-sm">
-                  <div className="flex flex-col">
-                    <div className="font-semibold text-sm text-foreground">{r.name} <span className="text-xs text-muted-foreground">• {r.role}</span></div>
-                    <p className="mt-3 text-sm text-muted-foreground">{r.text}</p>
-                    <div className="mt-3 flex items-center gap-1" aria-hidden>
-                      {Array.from({ length: 5 }).map((_, si) => (
-                        <svg key={si} className={`h-4 w-4 ${si < r.rating ? 'text-primary' : 'text-muted-foreground/60'}`} viewBox="0 0 20 20" fill="currentColor">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.173c.969 0 1.371 1.24.588 1.81l-3.375 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118L10 15.347l-3.376 2.455c-.784.57-1.838-.197-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.636 9.393c-.783-.57-.38-1.81.588-1.81h4.173a1 1 0 00.95-.69L9.049 2.927z" />
-                        </svg>
-                      ))}
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
+                <p className="mt-3 text-sm text-muted-foreground">{r.text}</p>
+
+                <div className="mt-4 text-xs text-muted-foreground">Project: <span className="text-foreground font-medium">Project #{(i % REVIEWS.length) + 1}</span></div>
+              </article>
+            ))}
           </div>
         </div>
       </div>
