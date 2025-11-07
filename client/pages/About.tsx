@@ -101,7 +101,7 @@ export default function About() {
 
   // Existing return continues below
   return (
-    <div className="container mx-auto py-16">
+    <div className="container mx-auto px-4 py-16">
       <div className="grid gap-8 md:grid-cols-3">
         {/* Left: Main content */}
         <div className="md:col-span-2">
@@ -167,22 +167,22 @@ export default function About() {
               </div>
             </div>
 
-            <div className="mt-8 flex items-center gap-4">
-              <a href="/contact" className="inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">
+            <div className="mt-8 flex flex-col md:flex-row items-center gap-4">
+              <a href="/contact" className="inline-block w-full md:w-auto rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground text-center">
                 Contact
               </a>
-              <a href="/projects" className="inline-block rounded-md border border-border px-4 py-2 text-sm text-muted-foreground">
+              <a href="/projects" className="inline-block w-full md:w-auto rounded-md border border-border px-4 py-2 text-sm text-muted-foreground text-center">
                 View Projects
               </a>
 
-              <button onClick={handleDownloadPdf} className="ml-auto text-sm text-muted-foreground underline">
+              <button onClick={handleDownloadPdf} className="text-sm text-muted-foreground underline mt-2 md:mt-0">
                 Download PDF
               </button>
             </div>
 
             <div className="mt-8">
               <h3 className="font-semibold text-lg text-primary">Resume Preview</h3>
-              <div className="mt-3 max-h-64 overflow-auto rounded-md border border-border bg-background/70 p-4 text-sm text-muted-foreground whitespace-pre-wrap">
+              <div className="mt-3 max-h-48 md:max-h-64 overflow-auto rounded-md border border-border bg-background/70 p-4 text-sm text-muted-foreground whitespace-pre-wrap">
                 {RESUME_TEXT}
               </div>
             </div>
@@ -191,11 +191,11 @@ export default function About() {
 
         {/* Right: Image card */}
         <aside className="md:col-span-1">
-          <div className="sticky top-20 rounded-2xl border border-border bg-card/60 p-6 text-center">
+          <div className="md:sticky md:top-20 rounded-2xl border border-border bg-card/60 p-6 text-center mt-6 md:mt-0">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Fe690a34fb9644577a9814872d86f9388%2F97fd4de9a2aa476cba4e151aec9f3b32?format=webp&width=800"
               alt="Waseem Ali"
-              className="mx-auto h-48 w-48 rounded-xl object-cover border-4 border-primary/20"
+              className="mx-auto h-40 w-40 sm:h-48 sm:w-48 rounded-xl object-cover border-4 border-primary/20"
             />
             <h3 className="mt-4 text-lg font-semibold text-primary">Waseem Ali</h3>
             <p className="mt-1 text-sm text-muted-foreground">BS Data Science • AI/ML Engineer</p>
