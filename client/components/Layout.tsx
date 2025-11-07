@@ -13,7 +13,7 @@ export default function Layout() {
       <main className="flex-1">
         <Outlet />
       </main>
-      {location.pathname !== "/" && <ToolsSection />}
+      {location.pathname === "/services" && <ToolsSection />}
       {location.pathname === "/" && <ReviewsSection /> }
       <Footer />
     </div>
