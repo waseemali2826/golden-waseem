@@ -260,7 +260,7 @@ export default function Index() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold">Freelance MERN Stack Developer</h3>
+                    <h3 className="font-semibold text-primary">Freelance MERN Stack Developer</h3>
                     <p className="text-sm text-muted-foreground">2022 — Present</p>
                   </div>
                 </div>
@@ -279,7 +279,7 @@ export default function Index() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold">Python Developer — Intern</h3>
+                    <h3 className="font-semibold text-primary">Python Developer — Intern</h3>
                     <p className="text-sm text-muted-foreground">2021 — 2022</p>
                   </div>
                 </div>
@@ -300,7 +300,7 @@ export default function Index() {
                     <path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <h3 className="font-semibold">BSc — Data Science</h3>
+                <h3 className="font-semibold text-primary">BSc — Data Science</h3>
               </div>
               <p className="mt-1 text-sm text-muted-foreground">NFC Institute of Engineering &amp; Fertilizer Research (2023 — 2027)</p>
               <p className="mt-3 text-sm text-muted-foreground flex-1">Focused on statistical modeling, machine learning, and data engineering. Relevant coursework includes Machine Learning, Data Mining, and Database Systems.</p>
@@ -314,7 +314,7 @@ export default function Index() {
                     <path d="M12 3v18" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </div>
-                <h3 className="font-semibold">MERN Stack Developer</h3>
+                <h3 className="font-semibold text-primary">MERN Stack Developer</h3>
               </div>
               <p className="mt-1 text-sm text-muted-foreground">Freelance / Personal Projects</p>
               <p className="mt-3 text-sm text-muted-foreground flex-1">Built full‑stack JavaScript applications using MongoDB, Express, React, and Node.js. Implemented RESTful APIs, responsive UIs, and CI/CD pipelines for production deployments.</p>
