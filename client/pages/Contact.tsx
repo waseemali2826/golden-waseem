@@ -141,6 +141,8 @@ export default function Contact() {
             <a
               className="rounded-md border border-border px-3 py-2 text-sm text-muted-foreground"
               href="https://www.instagram.com/waseemali3145/?igsh=YzljYTk1ODg3Zg%3D%3D"
+              target="_blank"
+              rel="noreferrer"
             >
               Instagram
             </a>
