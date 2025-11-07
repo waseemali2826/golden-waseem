@@ -377,27 +377,13 @@ export default function Index() {
       </section>
 
       {/* Contact teaser */}
-      <section
-        id="contact"
-        data-animate
-        className="py-16 bg-center bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(6,8,11,0.4), rgba(6,8,11,0.6)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F2cfe5aed37a34b308320b28ef875eb21?format=webp&width=2000')`,
-          backgroundAttachment: "fixed",
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="rounded-2xl p-10 text-center text-white bg-transparent">
-            <h2 className="font-serif text-2xl sm:text-3xl font-semibold">Let’s build something great</h2>
-            <p className="mt-2 text-white/90">Ready for your next project — web apps, APIs, dashboards.</p>
-            <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-              <Link to="/contact">
-                <Button className="w-full sm:w-auto bg-primary/95 border border-transparent">Contact</Button>
-              </Link>
-              <Link to="/services">
-                <Button variant="outline" className="w-full sm:w-auto">Services</Button>
-              </Link>
-            </div>
+      <section id="contact" data-animate className="container mx-auto py-16">
+        <div className="rounded-2xl border border-border bg-card/60 p-10 text-center">
+          <h2 className="font-serif text-2xl sm:text-3xl font-semibold">Let’s build something great</h2>
+          <p className="mt-2 text-muted-foreground">Ready for your next project — web apps, APIs, dashboards.</p>
+          <div className="mt-6 flex justify-center gap-3">
+            <Link to="/contact"><Button>Contact</Button></Link>
+            <Link to="/services"><Button variant="outline">Services</Button></Link>
           </div>
         </div>
       </section>
