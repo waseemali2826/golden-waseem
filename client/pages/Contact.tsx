@@ -24,11 +24,6 @@ export default function Contact() {
 
       <div className="grid gap-8 md:grid-cols-3">
         <div className="rounded-2xl border border-border bg-card/60 p-6 text-center">
-          <div className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-            <svg className="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M4 4h16v16H4z" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </div>
           <h3 className="mt-4 font-semibold text-primary">Email</h3>
           <p className="mt-2 text-sm text-muted-foreground">waseem38650@gmail.com</p>
         </div>
