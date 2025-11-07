@@ -219,10 +219,10 @@ export default function About() {
             </div>
 
             <div className="mt-4 flex justify-center gap-3">
-              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="text-sm underline">
+              <a href="https://www.linkedin.com/in/waseem-ali-2082002a6/" target="_blank" rel="noreferrer" className="text-sm underline">
                 LinkedIn
               </a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="text-sm underline">
+              <a href="https://github.com/waseemali2826" target="_blank" rel="noreferrer" className="text-sm underline">
                 GitHub
               </a>
             </div>
