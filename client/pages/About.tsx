@@ -116,7 +116,7 @@ export default function About() {
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               <div>
                 <h2 className="font-semibold text-lg sm:text-xl text-primary">Education &amp; Background</h2>
-                <ul className="mt-3 text-sm text-muted-foreground space-y-2">
+                <ul className="mt-3 text-sm text-white space-y-2">
                   <li>
                     <strong>BS Data Science</strong> — NFC Institute of Engineering and Fertilizer Research (2023–2027)
                   </li>
@@ -129,7 +129,7 @@ export default function About() {
                 </ul>
 
                 <h2 className="mt-6 font-semibold text-xl text-primary">Specialization Focus</h2>
-                <ul className="mt-3 text-sm text-muted-foreground space-y-2">
+                <ul className="mt-3 text-sm text-white space-y-2">
                   <li>Machine Learning</li>
                   <li>Data Science</li>
                   <li>Python Development</li>
