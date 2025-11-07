@@ -242,7 +242,10 @@ export default function Index() {
       </section>
 
       {/* Education & Experience */}
-      <section data-animate className="container mx-auto grid gap-6 py-12 md:grid-cols-2 items-stretch">
+      <section data-animate className="py-12 bg-center bg-cover bg-no-repeat" style={{
+        backgroundImage: `linear-gradient(rgba(6,8,11,0.5), rgba(6,8,11,0.6)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F900671041bde4f048b3f4f066e2d57f9?format=webp&width=2000')`,
+      }}>
+        <div className="container mx-auto grid gap-6 md:grid-cols-2 items-stretch text-white">
         <div>
           <h2 className="font-serif text-2xl text-primary">Experience</h2>
           <div className="mt-6 grid gap-6">
@@ -317,6 +320,7 @@ export default function Index() {
               <p className="mt-3 text-sm text-muted-foreground flex-1">Built full‑stack JavaScript applications using MongoDB, Express, React, and Node.js. Implemented RESTful APIs, responsive UIs, and CI/CD pipelines for production deployments.</p>
             </div>
           </div>
+        </div>
         </div>
       </section>
 
