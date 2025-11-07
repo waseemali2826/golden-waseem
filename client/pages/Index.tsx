@@ -99,7 +99,7 @@ export default function Index() {
             </div>
 
             <div className="mt-12 md:mt-0 flex justify-center">
-              <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl transform transition-transform duration-500 hover:scale-105 hero-bounce">
+              <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl transform transition-transform duration-500 hover:scale-105">
                 <img 
                   src="https://cdn.builder.io/api/v1/image/assets%2Fe690a34fb9644577a9814872d86f9388%2F97fd4de9a2aa476cba4e151aec9f3b32?format=webp&width=800" 
                   alt="Waseem Ali" 
