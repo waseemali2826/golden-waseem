@@ -75,7 +75,7 @@ export default function Index() {
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="text-center md:text-left">
               <p className="text-sm tracking-widest text-primary/80 mb-2">PORTFOLIO</p>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight text-foreground mb-4">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight text-foreground mb-4 hero-float">
                 Waseem Ali
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-6">
