@@ -14,7 +14,7 @@ export default function Layout() {
         <Outlet />
       </main>
       {location.pathname !== "/" && <ToolsSection />}
-      <ReviewsSection />
+      {location.pathname === "/" && <ReviewsSection /> }
       <Footer />
     </div>
   );
