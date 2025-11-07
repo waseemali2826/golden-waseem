@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 function StatCard({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -9,8 +10,6 @@ function StatCard({ title, children }: { title: string; children: React.ReactNod
     </div>
   );
 }
-
-import React, { useEffect, useState } from "react";
 
 export default function Index() {
   const heroImages = [
@@ -27,10 +26,38 @@ export default function Index() {
     return () => clearInterval(t);
   }, []);
 
+  // Scroll animations: observe elements with [data-animate] and reveal them when they enter the viewport.
+  useEffect(() => {
+    const elements = Array.from(document.querySelectorAll<HTMLElement>("[data-animate]"));
+    if (!elements.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target as HTMLElement;
+          if (entry.isIntersecting) {
+            el.classList.add("opacity-100", "translate-y-0");
+            el.classList.remove("opacity-0", "translate-y-6");
+            observer.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    elements.forEach((el) => {
+      // set initial state classes (these classes appear in source so Tailwind will include them)
+      el.classList.add("opacity-0", "translate-y-6", "transition-all", "duration-700", "ease-out");
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div>
       {/* Hero - Full Page */}
-      <section className="relative h-screen w-full overflow-hidden flex items-center">
+      <section data-animate className="relative h-screen w-full overflow-hidden flex items-center">
         {/* Background slider */}
         <div
           aria-hidden
@@ -43,7 +70,7 @@ export default function Index() {
             filter: "saturate(110%)",
           }}
         />
-        
+
         <div className="relative container mx-auto px-6 z-10">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="text-center md:text-left">
@@ -107,7 +134,7 @@ export default function Index() {
       </section>
 
       {/* Professional Summary */}
-      <section className="container mx-auto grid gap-6 py-12 md:grid-cols-4 items-stretch">
+      <section data-animate className="container mx-auto grid gap-6 py-12 md:grid-cols-4 items-stretch">
         <div className="md:col-span-4">
           <h2 className="font-serif text-2xl text-primary">Professional Summary</h2>
         </div>
@@ -126,7 +153,7 @@ export default function Index() {
       </section>
 
       {/* Technical Expertise */}
-      <section className="bg-muted/10 py-12">
+      <section data-animate className="bg-muted/10 py-12">
         <div className="container mx-auto">
           <h2 className="font-serif text-2xl text-primary">Technical Expertise</h2>
 
@@ -215,7 +242,7 @@ export default function Index() {
       </section>
 
       {/* Education & Experience */}
-      <section className="container mx-auto grid gap-6 py-12 md:grid-cols-2 items-stretch">
+      <section data-animate className="container mx-auto grid gap-6 py-12 md:grid-cols-2 items-stretch">
         <div>
           <h2 className="font-serif text-2xl text-primary">Experience</h2>
           <div className="mt-6 grid gap-6">
@@ -294,7 +321,7 @@ export default function Index() {
       </section>
 
       {/* Skills & Languages */}
-      <section className="bg-muted/10 py-12">
+      <section data-animate className="bg-muted/10 py-12">
         <div className="container mx-auto grid gap-8 md:grid-cols-2">
           <div>
             <h2 className="font-serif text-2xl text-primary">Top Technical Skills</h2>
@@ -315,7 +342,7 @@ export default function Index() {
       </section>
 
       {/* Tools / Add to Portfolio section */}
-      <section className="container mx-auto py-12">
+      <section data-animate className="container mx-auto py-12">
         <div className="rounded-2xl border border-border bg-card/60 p-8">
           <h2 className="font-serif text-2xl text-primary">Tools</h2>
           <p className="mt-2 text-sm text-muted-foreground">A quick overview of the tooling and utilities used across projects.</p>
@@ -346,7 +373,7 @@ export default function Index() {
       </section>
 
       {/* Contact teaser */}
-      <section id="contact" className="container mx-auto py-16">
+      <section id="contact" data-animate className="container mx-auto py-16">
         <div className="rounded-2xl border border-border bg-card/60 p-10 text-center">
           <h2 className="font-serif text-2xl text-primary">Let’s build something great</h2>
           <p className="mt-2 text-muted-foreground">Ready for your next project — web apps, APIs, dashboards.</p>
