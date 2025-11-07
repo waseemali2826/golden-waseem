@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -83,7 +84,9 @@ export default function Contact() {
             variant="outline"
             className="border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white transform hover:scale-105 transition-all duration-300 p-2"
           >
-            <Instagram className="w-3 h-3 sm:w-4 sm:h-4" />
+            <svg className="w-3 h-3 sm:w-4 sm:h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+              <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A3.5 3.5 0 1015.5 12 3.5 3.5 0 0012 8.5zm4.75-2.9a1.1 1.1 0 11-1.1-1.1 1.1 1.1 0 011.1 1.1z" />
+            </svg>
           </Button>
 
 
