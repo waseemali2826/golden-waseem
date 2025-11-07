@@ -105,10 +105,17 @@
 
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
   }
 
-  h1, h2, h3, .font-serif { font-family: "Cormorant Garamond", serif; }
+  h1,
+  h2,
+  h3,
+  .font-serif {
+    font-family: "Cormorant Garamond", serif;
+  }
 
   :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
     overflow-wrap: anywhere;
@@ -123,31 +130,45 @@
 
   /* Custom heading gradient for skills or other highlights */
   .skills-heading {
-    background: linear-gradient(90deg, #C6A664, #EEDC82);
+    background: linear-gradient(90deg, #c6a664, #eedc82);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: "Cormorant Garamond", serif;
   }
 
   /* Section background utility */
   .section-background {
-    background-color: #1A1A1A;
-    color: #EEDC82;
+    background-color: #1a1a1a;
+    color: #eedc82;
   }
 
   /* Hero bounce animations */
   @keyframes heroBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
   }
 
   @keyframes heroFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-4px); }
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
   }
 
-  .hero-bounce { animation: heroBounce 2s ease-in-out infinite; }
-  .hero-float { animation: heroFloat 3s ease-in-out infinite; }
+  .hero-bounce {
+    animation: heroBounce 2s ease-in-out infinite;
+  }
+  .hero-float {
+    animation: heroFloat 3s ease-in-out infinite;
+  }
 }

@@ -67,13 +67,23 @@ export default function About() {
   }
 
   // Try to fetch remote file and download if valid
-  async function tryDownloadRemote(remotePath: string, filename: string, expectedContentTypes: string[] = []) {
+  async function tryDownloadRemote(
+    remotePath: string,
+    filename: string,
+    expectedContentTypes: string[] = [],
+  ) {
     try {
       const res = await fetch(remotePath);
       if (!res.ok) return false;
       const contentType = (res.headers.get("content-type") || "").toLowerCase();
-      if (expectedContentTypes.length && !expectedContentTypes.some((t) => contentType.includes(t))) {
-        console.warn("Remote file found but content-type mismatch:", contentType);
+      if (
+        expectedContentTypes.length &&
+        !expectedContentTypes.some((t) => contentType.includes(t))
+      ) {
+        console.warn(
+          "Remote file found but content-type mismatch:",
+          contentType,
+        );
         return false;
       }
       const blob = await res.blob();
@@ -90,12 +100,14 @@ export default function About() {
     e.preventDefault();
     // Strict: only download the original PDF file to preserve exact formatting
     const remotePdfPath = "/Waseem_Ali_CV.pdf";
-    const got = await tryDownloadRemote(remotePdfPath, "Waseem_Ali_CV.pdf", ["pdf"]);
+    const got = await tryDownloadRemote(remotePdfPath, "Waseem_Ali_CV.pdf", [
+      "pdf",
+    ]);
     if (got) return;
 
     // If not available, inform the user and do not generate a fallback PDF to avoid formatting changes
     alert(
-      "Original PDF not found on the server. Please upload your exact PDF file to the project's public/Waseem_Ali_CV.pdf so the download preserves formatting. No automatic PDF is generated to avoid formatting differences."
+      "Original PDF not found on the server. Please upload your exact PDF file to the project's public/Waseem_Ali_CV.pdf so the download preserves formatting. No automatic PDF is generated to avoid formatting differences.",
     );
   }
 
@@ -105,20 +117,30 @@ export default function About() {
       <div className="grid gap-8 md:grid-cols-3">
         {/* Left: Main content */}
         <div className="md:col-span-2">
-          <div className="rounded-2xl border border-border p-6 sm:p-10 text-white" style={{
-            backgroundImage: `linear-gradient(rgba(6,8,11,0.55), rgba(6,8,11,0.55)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F578b6203ccb44c1baefb0691e6df06b1?format=webp&width=1600')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}>
-            <h1 className="font-serif text-2xl sm:text-3xl text-primary">About Me &amp; My Journey</h1>
-            <p className="mt-3 text-base sm:text-lg text-muted-foreground">Waseem Ali — AI/ML · Data Science · Python Developer</p>
+          <div
+            className="rounded-2xl border border-border p-6 sm:p-10 text-white"
+            style={{
+              backgroundImage: `linear-gradient(rgba(6,8,11,0.55), rgba(6,8,11,0.55)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F578b6203ccb44c1baefb0691e6df06b1?format=webp&width=1600')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h1 className="font-serif text-2xl sm:text-3xl text-primary">
+              About Me &amp; My Journey
+            </h1>
+            <p className="mt-3 text-base sm:text-lg text-muted-foreground">
+              Waseem Ali — AI/ML · Data Science · Python Developer
+            </p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               <div>
-                <h2 className="font-semibold text-lg sm:text-xl text-primary">Education &amp; Background</h2>
+                <h2 className="font-semibold text-lg sm:text-xl text-primary">
+                  Education &amp; Background
+                </h2>
                 <ul className="mt-3 text-sm text-white space-y-2">
                   <li>
-                    <strong>BS Data Science</strong> — NFC Institute of Engineering and Fertilizer Research (2023–2027)
+                    <strong>BS Data Science</strong> — NFC Institute of
+                    Engineering and Fertilizer Research (2023–2027)
                   </li>
                   <li>
                     <strong>Location:</strong> Pakistan
@@ -128,7 +150,9 @@ export default function About() {
                   </li>
                 </ul>
 
-                <h2 className="mt-6 font-semibold text-xl text-primary">Specialization Focus</h2>
+                <h2 className="mt-6 font-semibold text-xl text-primary">
+                  Specialization Focus
+                </h2>
                 <ul className="mt-3 text-sm text-white space-y-2">
                   <li>Machine Learning</li>
                   <li>Data Science</li>
@@ -138,19 +162,27 @@ export default function About() {
               </div>
 
               <div>
-                <h2 className="font-semibold text-lg sm:text-xl text-primary">AI / ML &amp; Data Science</h2>
+                <h2 className="font-semibold text-lg sm:text-xl text-primary">
+                  AI / ML &amp; Data Science
+                </h2>
                 <p className="mt-3 text-sm text-white">
-                  Passionate about creating intelligent systems that solve real-world problems. My journey combines data science
-                  foundations with cutting-edge AI/ML technologies and development expertise.
+                  Passionate about creating intelligent systems that solve
+                  real-world problems. My journey combines data science
+                  foundations with cutting-edge AI/ML technologies and
+                  development expertise.
                 </p>
 
                 <p className="mt-4 text-sm text-white">
-                  Hands-on experience with data cleaning, exploratory analysis, feature engineering, and building models for
-                  classification, regression, and clustering tasks using Python, scikit-learn, TensorFlow, and PyTorch.
+                  Hands-on experience with data cleaning, exploratory analysis,
+                  feature engineering, and building models for classification,
+                  regression, and clustering tasks using Python, scikit-learn,
+                  TensorFlow, and PyTorch.
                 </p>
 
                 <div className="mt-6">
-                  <h3 className="text-sm font-semibold text-primary">Tools &amp; Libraries</h3>
+                  <h3 className="text-sm font-semibold text-primary">
+                    Tools &amp; Libraries
+                  </h3>
                   <div className="mt-3 flex flex-wrap gap-2">
                     {[
                       "Python",
@@ -162,7 +194,10 @@ export default function About() {
                       "React",
                       "TailwindCSS",
                     ].map((t) => (
-                      <span key={t} className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
+                      <span
+                        key={t}
+                        className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground"
+                      >
                         {t}
                       </span>
                     ))}
@@ -172,22 +207,41 @@ export default function About() {
             </div>
 
             <div className="mt-8 flex flex-col md:flex-row items-center gap-4">
-              <a href="/contact" className="inline-block w-full md:w-auto rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground text-center">
+              <a
+                href="/contact"
+                className="inline-block w-full md:w-auto rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground text-center"
+              >
                 Contact
               </a>
-              <a href="/projects" className="inline-block w-full md:w-auto rounded-md border border-border px-4 py-2 text-sm text-muted-foreground text-center">
+              <a
+                href="/projects"
+                className="inline-block w-full md:w-auto rounded-md border border-border px-4 py-2 text-sm text-muted-foreground text-center"
+              >
                 View Projects
               </a>
 
-              <button onClick={handleDownloadPdf} className="text-sm text-muted-foreground underline mt-2 md:mt-0">
+              <button
+                onClick={handleDownloadPdf}
+                className="text-sm text-muted-foreground underline mt-2 md:mt-0"
+              >
                 Download PDF
               </button>
             </div>
 
             <div className="mt-6">
-              <div className="w-full rounded-xl overflow-hidden mb-6" style={{height: 160, backgroundImage: `linear-gradient(rgba(6,8,11,0.45), rgba(6,8,11,0.6)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F578b6203ccb44c1baefb0691e6df06b1?format=webp&width=1600')`, backgroundSize: 'cover', backgroundPosition: 'center'}} />
+              <div
+                className="w-full rounded-xl overflow-hidden mb-6"
+                style={{
+                  height: 160,
+                  backgroundImage: `linear-gradient(rgba(6,8,11,0.45), rgba(6,8,11,0.6)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F578b6203ccb44c1baefb0691e6df06b1?format=webp&width=1600')`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              />
 
-              <h3 className="font-semibold text-lg text-primary">Resume Preview</h3>
+              <h3 className="font-semibold text-lg text-primary">
+                Resume Preview
+              </h3>
               <div className="mt-3 max-h-48 md:max-h-64 overflow-auto rounded-md border border-border bg-background/70 p-4 text-xs sm:text-sm text-muted-foreground whitespace-pre-wrap">
                 {RESUME_TEXT}
               </div>
@@ -201,8 +255,8 @@ export default function About() {
             className="md:sticky md:top-20 rounded-2xl border border-border p-4 sm:p-6 text-center mt-6 md:mt-0 text-white"
             style={{
               backgroundImage: `linear-gradient(rgba(6,8,11,0.55), rgba(6,8,11,0.55)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2Faf5c9829f3734fbba114712f80b9187f?format=webp&width=1200')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
           >
             <img
@@ -210,19 +264,37 @@ export default function About() {
               alt="Waseem Ali"
               className="mx-auto h-40 w-40 sm:h-48 sm:w-48 rounded-xl object-cover border-4 border-primary/20"
             />
-            <h3 className="mt-4 text-base sm:text-lg font-semibold text-primary">Waseem Ali</h3>
-            <p className="mt-1 text-xs sm:text-sm text-muted-foreground">BS Data Science • AI/ML Engineer</p>
+            <h3 className="mt-4 text-base sm:text-lg font-semibold text-primary">
+              Waseem Ali
+            </h3>
+            <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
+              BS Data Science • AI/ML Engineer
+            </p>
 
             <div className="mt-4 grid gap-2">
-              <div className="rounded-md bg-background/80 px-3 py-2 text-sm text-muted-foreground">Location: Pakistan</div>
-              <div className="rounded-md bg-background/80 px-3 py-2 text-sm text-muted-foreground">Available: Remote</div>
+              <div className="rounded-md bg-background/80 px-3 py-2 text-sm text-muted-foreground">
+                Location: Pakistan
+              </div>
+              <div className="rounded-md bg-background/80 px-3 py-2 text-sm text-muted-foreground">
+                Available: Remote
+              </div>
             </div>
 
             <div className="mt-4 flex justify-center gap-3">
-              <a href="https://www.linkedin.com/in/waseem-ali-2082002a6/" target="_blank" rel="noreferrer" className="text-sm underline">
+              <a
+                href="https://www.linkedin.com/in/waseem-ali-2082002a6/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm underline"
+              >
                 LinkedIn
               </a>
-              <a href="https://github.com/waseemali2826" target="_blank" rel="noreferrer" className="text-sm underline">
+              <a
+                href="https://github.com/waseemali2826"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm underline"
+              >
                 GitHub
               </a>
             </div>
