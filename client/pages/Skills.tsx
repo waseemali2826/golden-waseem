@@ -121,8 +121,8 @@ export default function Skills() {
 
         {/* FAQ section placed after Hire / Contact */}
         <div className="mt-8">
-          <h2 className="text-2xl font-semibold text-primary">Frequently Asked Questions</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Common questions about hiring, collaboration, and technical capabilities.</p>
+          <h2 className="text-2xl font-semibold text-primary text-center">Frequently Asked Questions</h2>
+          <p className="mt-2 text-sm text-muted-foreground text-center">Common questions about hiring, collaboration, and technical capabilities.</p>
 
           <div className="mt-4">
             <Accordion type="single" collapsible>
