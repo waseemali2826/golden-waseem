@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import ReviewsSection from "@/components/ReviewsSection";
 
 function StatCard({ title, children }: { title: string; children: React.ReactNode }) {
   return (
