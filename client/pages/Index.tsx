@@ -379,14 +379,7 @@ export default function Index() {
       {/* Trusted stats section (reference image) */}
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div
-            className="rounded-2xl overflow-hidden"
-            style={{
-              backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F7af3b58414d645cda7bd38a6c70ae94d?format=webp&width=2000')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          >
+          <div className="rounded-2xl overflow-hidden bg-card/60">
             <div className="p-12 text-center text-muted-foreground">
               <h2 className="text-2xl sm:text-3xl font-semibold">Trusted by Thousands</h2>
               <p className="mt-2 text-sm text-muted-foreground/90">Join our growing community of satisfied users</p>
