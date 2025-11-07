@@ -105,13 +105,13 @@ export default function About() {
       <div className="grid gap-8 md:grid-cols-3">
         {/* Left: Main content */}
         <div className="md:col-span-2">
-          <div className="rounded-2xl border border-border bg-card/60 p-10">
-            <h1 className="font-serif text-3xl text-primary">About Me &amp; My Journey</h1>
-            <p className="mt-3 text-lg text-muted-foreground">Waseem Ali — AI/ML · Data Science · Python Developer</p>
+          <div className="rounded-2xl border border-border bg-card/60 p-6 sm:p-10">
+            <h1 className="font-serif text-2xl sm:text-3xl text-primary">About Me &amp; My Journey</h1>
+            <p className="mt-3 text-base sm:text-lg text-muted-foreground">Waseem Ali — AI/ML · Data Science · Python Developer</p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-2">
               <div>
-                <h2 className="font-semibold text-xl text-primary">Education &amp; Background</h2>
+                <h2 className="font-semibold text-lg sm:text-xl text-primary">Education &amp; Background</h2>
                 <ul className="mt-3 text-sm text-muted-foreground space-y-2">
                   <li>
                     <strong>BS Data Science</strong> — NFC Institute of Engineering and Fertilizer Research (2023–2027)
@@ -134,7 +134,7 @@ export default function About() {
               </div>
 
               <div>
-                <h2 className="font-semibold text-xl text-primary">AI / ML &amp; Data Science</h2>
+                <h2 className="font-semibold text-lg sm:text-xl text-primary">AI / ML &amp; Data Science</h2>
                 <p className="mt-3 text-sm text-muted-foreground">
                   Passionate about creating intelligent systems that solve real-world problems. My journey combines data science
                   foundations with cutting-edge AI/ML technologies and development expertise.
@@ -182,7 +182,7 @@ export default function About() {
 
             <div className="mt-8">
               <h3 className="font-semibold text-lg text-primary">Resume Preview</h3>
-              <div className="mt-3 max-h-48 md:max-h-64 overflow-auto rounded-md border border-border bg-background/70 p-4 text-sm text-muted-foreground whitespace-pre-wrap">
+              <div className="mt-3 max-h-48 md:max-h-64 overflow-auto rounded-md border border-border bg-background/70 p-4 text-xs sm:text-sm text-muted-foreground whitespace-pre-wrap">
                 {RESUME_TEXT}
               </div>
             </div>
@@ -191,14 +191,14 @@ export default function About() {
 
         {/* Right: Image card */}
         <aside className="md:col-span-1">
-          <div className="md:sticky md:top-20 rounded-2xl border border-border bg-card/60 p-6 text-center mt-6 md:mt-0">
+          <div className="md:sticky md:top-20 rounded-2xl border border-border bg-card/60 p-4 sm:p-6 text-center mt-6 md:mt-0">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Fe690a34fb9644577a9814872d86f9388%2F97fd4de9a2aa476cba4e151aec9f3b32?format=webp&width=800"
               alt="Waseem Ali"
               className="mx-auto h-40 w-40 sm:h-48 sm:w-48 rounded-xl object-cover border-4 border-primary/20"
             />
-            <h3 className="mt-4 text-lg font-semibold text-primary">Waseem Ali</h3>
-            <p className="mt-1 text-sm text-muted-foreground">BS Data Science • AI/ML Engineer</p>
+            <h3 className="mt-4 text-base sm:text-lg font-semibold text-primary">Waseem Ali</h3>
+            <p className="mt-1 text-xs sm:text-sm text-muted-foreground">BS Data Science • AI/ML Engineer</p>
 
             <div className="mt-4 grid gap-2">
               <div className="rounded-md bg-background/80 px-3 py-2 text-sm text-muted-foreground">Location: Pakistan</div>
