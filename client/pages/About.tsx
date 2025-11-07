@@ -184,7 +184,9 @@ export default function About() {
               </button>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-6">
+              <div className="w-full rounded-xl overflow-hidden mb-6" style={{height: 160, backgroundImage: `linear-gradient(rgba(6,8,11,0.45), rgba(6,8,11,0.6)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F578b6203ccb44c1baefb0691e6df06b1?format=webp&width=1600')`, backgroundSize: 'cover', backgroundPosition: 'center'}} />
+
               <h3 className="font-semibold text-lg text-primary">Resume Preview</h3>
               <div className="mt-3 max-h-48 md:max-h-64 overflow-auto rounded-md border border-border bg-background/70 p-4 text-xs sm:text-sm text-muted-foreground whitespace-pre-wrap">
                 {RESUME_TEXT}
