@@ -379,27 +379,29 @@ export default function Index() {
       {/* Trusted stats section (reference image) */}
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="rounded-2xl overflow-hidden bg-card/60">
-            <div className="p-12 text-center text-muted-foreground">
-              <h2 className="text-2xl sm:text-3xl font-semibold">Trusted by Thousands</h2>
-              <p className="mt-2 text-sm text-muted-foreground/90">Join our growing community of satisfied users</p>
+          <div className="rounded-2xl overflow-hidden bg-gradient-to-r from-primary/80 to-primary/50">
+            <div className="p-12 text-center text-white">
+              <div className="inline-block bg-primary/95 bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full">
+                <h2 className="text-2xl sm:text-3xl font-semibold">Trusted by Thousands</h2>
+                <p className="mt-1 text-sm text-white/90">Join our growing community of satisfied users</p>
+              </div>
 
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
                 <div className="py-4">
-                  <div className="text-3xl font-bold text-muted-foreground">50K+</div>
-                  <div className="mt-2 text-sm text-muted-foreground/90">Active Users</div>
+                  <div className="text-3xl font-bold text-white">50K+</div>
+                  <div className="mt-2 text-sm text-white/90">Active Users</div>
                 </div>
                 <div className="py-4">
-                  <div className="text-3xl font-bold text-muted-foreground">15</div>
-                  <div className="mt-2 text-sm text-muted-foreground/90">Powerful Tools</div>
+                  <div className="text-3xl font-bold text-white">15</div>
+                  <div className="mt-2 text-sm text-white/90">Powerful Tools</div>
                 </div>
                 <div className="py-4">
-                  <div className="text-3xl font-bold text-muted-foreground">1M+</div>
-                  <div className="mt-2 text-sm text-muted-foreground/90">Texts Processed</div>
+                  <div className="text-3xl font-bold text-white">1M+</div>
+                  <div className="mt-2 text-sm text-white/90">Texts Processed</div>
                 </div>
                 <div className="py-4">
-                  <div className="text-3xl font-bold text-muted-foreground">99.9%</div>
-                  <div className="mt-2 text-sm text-muted-foreground/90">Uptime</div>
+                  <div className="text-3xl font-bold text-white">99.9%</div>
+                  <div className="mt-2 text-sm text-white/90">Uptime</div>
                 </div>
               </div>
             </div>
