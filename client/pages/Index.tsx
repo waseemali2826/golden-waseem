@@ -242,6 +242,9 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Reviews */}
+      <ReviewsSection />
+
       {/* Education & Experience */}
       <section data-animate className="py-12 bg-center bg-cover bg-no-repeat" style={{
         backgroundImage: `linear-gradient(rgba(6,8,11,0.5), rgba(6,8,11,0.6)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F900671041bde4f048b3f4f066e2d57f9?format=webp&width=2000')`,
@@ -339,7 +342,7 @@ export default function Index() {
           <div>
             <h2 className="font-serif text-2xl text-primary">Languages</h2>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>Urdu �� Native</li>
+              <li>Urdu — Native</li>
               <li>English — Professional working</li>
             </ul>
           </div>
