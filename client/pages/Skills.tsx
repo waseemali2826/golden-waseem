@@ -60,7 +60,12 @@ function SkillRow({ name, pct }: { name: string; pct: number }) {
   );
 }
 
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
 
 const FAQ_ITEMS = [
   {
@@ -101,13 +106,23 @@ export default function Skills() {
   return (
     <div className="container mx-auto py-16">
       <div className="rounded-2xl border border-border bg-card/60 p-8">
-        <h1 className="font-serif text-3xl text-primary text-center">Skills & Expertise</h1>
-        <p className="mt-3 text-center text-muted-foreground">A curated overview of technical strengths across programming, data science, web development, and AI.</p>
+        <h1 className="font-serif text-3xl text-primary text-center">
+          Skills & Expertise
+        </h1>
+        <p className="mt-3 text-center text-muted-foreground">
+          A curated overview of technical strengths across programming, data
+          science, web development, and AI.
+        </p>
 
         <div className="mt-8 grid gap-6 md:grid-cols-4">
           {skillsData.map((group) => (
-            <section key={group.title} className="rounded-xl border border-border p-6 bg-background/5">
-              <h3 className="text-md font-semibold text-primary mb-4">{group.title}</h3>
+            <section
+              key={group.title}
+              className="rounded-xl border border-border p-6 bg-background/5"
+            >
+              <h3 className="text-md font-semibold text-primary mb-4">
+                {group.title}
+              </h3>
               {group.items.map((it) => (
                 <SkillRow key={it.name} name={it.name} pct={it.pct} />
               ))}
@@ -116,13 +131,23 @@ export default function Skills() {
         </div>
 
         <div className="mt-8 flex justify-end">
-          <a href="/contact" className="inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground">Hire / Contact</a>
+          <a
+            href="/contact"
+            className="inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
+          >
+            Hire / Contact
+          </a>
         </div>
 
         {/* FAQ section placed after Hire / Contact */}
         <div className="mt-8">
-          <h2 className="text-2xl font-semibold text-primary">Frequently Asked Questions</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Common questions about hiring, collaboration, and technical capabilities.</p>
+          <h2 className="text-2xl font-semibold text-primary text-center">
+            Frequently Asked Questions
+          </h2>
+          <p className="mt-2 text-sm text-muted-foreground text-center">
+            Common questions about hiring, collaboration, and technical
+            capabilities.
+          </p>
 
           <div className="mt-4">
             <Accordion type="single" collapsible>
