@@ -48,57 +48,51 @@ export default function ReviewsSection() {
   const secondRow = REVIEWS.slice(5, 10);
 
   return (
-    <section data-animate className="py-12" style={{ backgroundImage: `linear-gradient(rgba(6,8,11,0.85), rgba(6,8,11,0.85)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2Fc1b3afa24b8e4a84845b7eddcbfa8099?format=webp&width=2000')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="rounded-2xl border border-primary/20 bg-transparent p-8">
-          <h2 className="font-serif text-2xl text-primary text-center">What people say</h2>
-          <p className="mt-2 text-center text-white/80">Real reviews from clients and collaborators</p>
+    <section data-animate className="w-full py-12 bg-background/5">
+      <div className="w-full px-6">
+        <div className="rounded-2xl border border-border bg-card/60 p-8 w-full">
+          <h2 className="font-serif text-2xl text-primary text-center">What people say — Project reviews</h2>
+          <p className="mt-2 text-center text-muted-foreground">Feedback specific to delivered projects and outcomes</p>
 
-          <div ref={containerRef} className="mt-8 grid gap-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+          <div ref={containerRef} className="mt-8 grid gap-6 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full">
               {firstRow.map((r, i) => (
-                <article key={i} className="review-card relative rounded-2xl border border-primary/20 bg-[#0b0b0b]/80 p-6 shadow-2xl">
-                  <div className="absolute top-4 right-4 flex items-center gap-1" aria-hidden>
-                    {Array.from({ length: 5 }).map((_, si) => (
-                      <svg key={si} className={`h-4 w-4 ${si < r.rating ? 'text-primary' : 'text-muted-foreground/50'}`} viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.173c.969 0 1.371 1.24.588 1.81l-3.375 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118L10 15.347l-3.376 2.455c-.784.57-1.838-.197-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.636 9.393c-.783-.57-.38-1.81.588-1.81h4.173a1 1 0 00.95-.69L9.049 2.927z" />
-                      </svg>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-full flex items-center justify-center text-primary font-semibold bg-transparent border-2 border-primary/30">{r.name.split(" ")[0][0]}</div>
-                    <div>
-                      <div className="font-semibold text-sm text-white">{r.name}</div>
-                      <div className="text-xs text-white/70">{r.role}</div>
+                <article key={i} className="review-card rounded-xl border border-border bg-card p-4 shadow-sm">
+                  <div className="flex items-start gap-3">
+                    <div className="h-12 w-12 rounded-full flex items-center justify-center text-primary font-semibold bg-primary/10 border border-primary/20">{r.name.split(" ")[0][0]}</div>
+                    <div className="flex-1">
+                      <div className="font-semibold text-sm text-foreground">{r.name} <span className="text-xs text-muted-foreground">• {r.role}</span></div>
+                      <p className="mt-3 text-sm text-muted-foreground">{r.text}</p>
+                      <div className="mt-3 flex items-center gap-1" aria-hidden>
+                        {Array.from({ length: 5 }).map((_, si) => (
+                          <svg key={si} className={`h-4 w-4 ${si < r.rating ? 'text-primary' : 'text-muted-foreground/60'}`} viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.173c.969 0 1.371 1.24.588 1.81l-3.375 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118L10 15.347l-3.376 2.455c-.784.57-1.838-.197-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.636 9.393c-.783-.57-.38-1.81.588-1.81h4.173a1 1 0 00.95-.69L9.049 2.927z" />
+                          </svg>
+                        ))}
+                      </div>
                     </div>
                   </div>
-
-                  <p className="mt-4 text-sm text-white/80">{r.text}</p>
                 </article>
               ))}
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full">
               {secondRow.map((r, i) => (
-                <article key={i + 5} className="review-card relative rounded-2xl border border-primary/20 bg-[#0b0b0b]/80 p-6 shadow-2xl">
-                  <div className="absolute top-4 right-4 flex items-center gap-1" aria-hidden>
-                    {Array.from({ length: 5 }).map((_, si) => (
-                      <svg key={si} className={`h-4 w-4 ${si < r.rating ? 'text-primary' : 'text-muted-foreground/50'}`} viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.173c.969 0 1.371 1.24.588 1.81l-3.375 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118L10 15.347l-3.376 2.455c-.784.57-1.838-.197-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.636 9.393c-.783-.57-.38-1.81.588-1.81h4.173a1 1 0 00.95-.69L9.049 2.927z" />
-                      </svg>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-full flex items-center justify-center text-primary font-semibold bg-transparent border-2 border-primary/30">{r.name.split(" ")[0][0]}</div>
-                    <div>
-                      <div className="font-semibold text-sm text-white">{r.name}</div>
-                      <div className="text-xs text-white/70">{r.role}</div>
+                <article key={i + 5} className="review-card rounded-xl border border-border bg-card p-4 shadow-sm">
+                  <div className="flex items-start gap-3">
+                    <div className="h-12 w-12 rounded-full flex items-center justify-center text-primary font-semibold bg-primary/10 border border-primary/20">{r.name.split(" ")[0][0]}</div>
+                    <div className="flex-1">
+                      <div className="font-semibold text-sm text-foreground">{r.name} <span className="text-xs text-muted-foreground">• {r.role}</span></div>
+                      <p className="mt-3 text-sm text-muted-foreground">{r.text}</p>
+                      <div className="mt-3 flex items-center gap-1" aria-hidden>
+                        {Array.from({ length: 5 }).map((_, si) => (
+                          <svg key={si} className={`h-4 w-4 ${si < r.rating ? 'text-primary' : 'text-muted-foreground/60'}`} viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.966a1 1 0 00.95.69h4.173c.969 0 1.371 1.24.588 1.81l-3.375 2.455a1 1 0 00-.364 1.118l1.287 3.966c.3.921-.755 1.688-1.54 1.118L10 15.347l-3.376 2.455c-.784.57-1.838-.197-1.539-1.118l1.287-3.966a1 1 0 00-.364-1.118L2.636 9.393c-.783-.57-.38-1.81.588-1.81h4.173a1 1 0 00.95-.69L9.049 2.927z" />
+                          </svg>
+                        ))}
+                      </div>
                     </div>
                   </div>
-
-                  <p className="mt-4 text-sm text-white/80">{r.text}</p>
                 </article>
               ))}
             </div>
