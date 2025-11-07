@@ -72,7 +72,7 @@ export default function Contact() {
           <p className="mt-3 text-sm text-muted-foreground text-center">Ready to work together? Let\'s discuss your next project and bring your ideas to life with cutting-edge technology and innovative solutions.</p>
 
           <div className="mt-6 flex items-center justify-center gap-3">
-            <a className="rounded-md border border-border px-3 py-2 text-sm text-muted-foreground" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a className="rounded-md border border-border px-3 py-2 text-sm text-muted-foreground" href="https://www.linkedin.com/in/waseem-ali-2082002a6/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a className="rounded-md border border-border px-3 py-2 text-sm text-muted-foreground" href="https://github.com/waseemali2826" target="_blank" rel="noreferrer">GitHub</a>
             <a className="rounded-md border border-border px-3 py-2 text-sm text-muted-foreground" href="#" >Instagram</a>
           </div>
