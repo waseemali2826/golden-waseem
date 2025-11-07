@@ -373,13 +373,29 @@ export default function Index() {
       </section>
 
       {/* Contact teaser */}
-      <section id="contact" data-animate className="container mx-auto py-16">
-        <div className="rounded-2xl border border-border bg-card/60 p-10 text-center">
-          <h2 className="font-serif text-2xl text-primary">Let’s build something great</h2>
-          <p className="mt-2 text-muted-foreground">Ready for your next project — web apps, APIs, dashboards.</p>
-          <div className="mt-6 flex justify-center gap-3">
-            <Link to="/contact"><Button>Contact</Button></Link>
-            <Link to="/services"><Button variant="outline">Services</Button></Link>
+      <section
+        id="contact"
+        data-animate
+        className="container mx-auto py-16"
+      >
+        <div
+          className="rounded-2xl border border-border p-10 text-center text-white overflow-hidden"
+          style={{
+            backgroundImage: `linear-gradient(rgba(6,8,11,0.55), rgba(6,8,11,0.65)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2Fb07b381cac1c4225890fb96141f4aa62?format=webp&width=1600')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <h2 className="font-serif text-2xl sm:text-3xl font-semibold">Let’s build something great</h2>
+          <p className="mt-2 text-white/90">Ready for your next project — web apps, APIs, dashboards.</p>
+          <div className="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+            <Link to="/contact">
+              <Button className="w-full sm:w-auto bg-primary/95 border border-transparent">Contact</Button>
+            </Link>
+            <Link to="/services">
+              <Button variant="outline" className="w-full sm:w-auto">Services</Button>
+            </Link>
           </div>
         </div>
       </section>
