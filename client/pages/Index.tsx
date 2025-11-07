@@ -376,6 +376,44 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Trusted stats section (reference image) */}
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto px-4">
+          <div
+            className="rounded-2xl overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(90deg, rgba(198,166,100,0.95), rgba(238,220,130,0.95)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F7af3b58414d645cda7bd38a6c70ae94d?format=webp&width=2000')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="p-12 text-center text-white">
+              <h2 className="text-2xl sm:text-3xl font-semibold">Trusted by Thousands</h2>
+              <p className="mt-2 text-sm text-white/90">Join our growing community of satisfied users</p>
+
+              <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
+                <div className="py-4">
+                  <div className="text-3xl font-bold text-white">50K+</div>
+                  <div className="mt-2 text-sm text-white/90">Active Users</div>
+                </div>
+                <div className="py-4">
+                  <div className="text-3xl font-bold text-white">15</div>
+                  <div className="mt-2 text-sm text-white/90">Powerful Tools</div>
+                </div>
+                <div className="py-4">
+                  <div className="text-3xl font-bold text-white">1M+</div>
+                  <div className="mt-2 text-sm text-white/90">Texts Processed</div>
+                </div>
+                <div className="py-4">
+                  <div className="text-3xl font-bold text-white">99.9%</div>
+                  <div className="mt-2 text-sm text-white/90">Uptime</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact teaser */}
       <section id="contact" data-animate className="container mx-auto py-16">
         <div className="rounded-2xl border border-border bg-card/60 p-10 text-center">
