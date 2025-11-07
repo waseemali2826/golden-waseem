@@ -191,7 +191,14 @@ export default function About() {
 
         {/* Right: Image card */}
         <aside className="md:col-span-1">
-          <div className="md:sticky md:top-20 rounded-2xl border border-border bg-card/60 p-4 sm:p-6 text-center mt-6 md:mt-0">
+          <div
+            className="md:sticky md:top-20 rounded-2xl border border-border p-4 sm:p-6 text-center mt-6 md:mt-0 text-white"
+            style={{
+              backgroundImage: `linear-gradient(rgba(6,8,11,0.55), rgba(6,8,11,0.55)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2Faf5c9829f3734fbba114712f80b9187f?format=webp&width=1200')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Fe690a34fb9644577a9814872d86f9388%2F97fd4de9a2aa476cba4e151aec9f3b32?format=webp&width=800"
               alt="Waseem Ali"
