@@ -15,8 +15,8 @@ export default function Footer() {
               Passionate about AI, Machine Learning, and Data Science. Building the future through intelligent systems and innovative solutions.
             </p>
             <div className="mt-4 flex gap-3">
-              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="rounded-md border border-border px-3 py-2 text-sm text-muted-foreground hover:text-primary">LinkedIn</a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="rounded-md border border-border px-3 py-2 text-sm text-muted-foreground hover:text-primary">GitHub</a>
+              <a href="https://www.linkedin.com/in/waseem-ali-2082002a6/" target="_blank" rel="noreferrer" className="rounded-md border border-border px-3 py-2 text-sm text-muted-foreground hover:text-primary">LinkedIn</a>
+              <a href="https://github.com/waseemali2826" target="_blank" rel="noreferrer" className="rounded-md border border-border px-3 py-2 text-sm text-muted-foreground hover:text-primary">GitHub</a>
             </div>
           </div>
 
