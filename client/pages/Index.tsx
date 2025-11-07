@@ -381,10 +381,8 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="rounded-2xl overflow-hidden bg-gradient-to-r from-primary/80 to-primary/50">
             <div className="p-12 text-center text-white">
-              <div className="inline-block bg-primary/95 bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <h2 className="text-2xl sm:text-3xl font-semibold">Trusted by Thousands</h2>
-                <p className="mt-1 text-sm text-white/90">Join our growing community of satisfied users</p>
-              </div>
+              <p className="mt-1 text-sm text-white/90">Join our growing community of satisfied users</p>
 
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
                 <div className="py-4">
