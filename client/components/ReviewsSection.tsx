@@ -97,7 +97,6 @@ export default function ReviewsSection() {
 
                 <p className="mt-3 text-sm text-muted-foreground">{r.text}</p>
 
-                <div className="mt-4 text-xs text-muted-foreground">Project: <span className="text-foreground font-medium">Project #{(i % REVIEWS.length) + 1}</span></div>
               </article>
             ))}
           </div>
