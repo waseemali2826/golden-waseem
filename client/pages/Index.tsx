@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
+import ReviewsSection from "@/components/ReviewsSection";
 
 function StatCard({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -338,7 +339,7 @@ export default function Index() {
           <div>
             <h2 className="font-serif text-2xl text-primary">Languages</h2>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>Urdu — Native</li>
+              <li>Urdu �� Native</li>
               <li>English — Professional working</li>
             </ul>
           </div>
