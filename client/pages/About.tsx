@@ -105,7 +105,11 @@ export default function About() {
       <div className="grid gap-8 md:grid-cols-3">
         {/* Left: Main content */}
         <div className="md:col-span-2">
-          <div className="rounded-2xl border border-border bg-card/60 p-6 sm:p-10">
+          <div className="rounded-2xl border border-border p-6 sm:p-10 text-white" style={{
+            backgroundImage: `linear-gradient(rgba(6,8,11,0.55), rgba(6,8,11,0.55)), url('https://cdn.builder.io/api/v1/image/assets%2F121404fcb1684e55a4fdbb955d186e82%2F578b6203ccb44c1baefb0691e6df06b1?format=webp&width=1600')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}>
             <h1 className="font-serif text-2xl sm:text-3xl text-primary">About Me &amp; My Journey</h1>
             <p className="mt-3 text-base sm:text-lg text-muted-foreground">Waseem Ali — AI/ML · Data Science · Python Developer</p>
 
