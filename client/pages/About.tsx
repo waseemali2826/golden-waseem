@@ -139,12 +139,12 @@ export default function About() {
 
               <div>
                 <h2 className="font-semibold text-lg sm:text-xl text-primary">AI / ML &amp; Data Science</h2>
-                <p className="mt-3 text-sm text-muted-foreground">
+                <p className="mt-3 text-sm text-white">
                   Passionate about creating intelligent systems that solve real-world problems. My journey combines data science
                   foundations with cutting-edge AI/ML technologies and development expertise.
                 </p>
 
-                <p className="mt-4 text-sm text-muted-foreground">
+                <p className="mt-4 text-sm text-white">
                   Hands-on experience with data cleaning, exploratory analysis, feature engineering, and building models for
                   classification, regression, and clustering tasks using Python, scikit-learn, TensorFlow, and PyTorch.
                 </p>
