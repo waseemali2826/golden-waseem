@@ -13,9 +13,7 @@ function StatCard({
   return (
     <div className="rounded-xl border border-border bg-card/60 p-5 shadow h-full flex flex-col">
       <h3 className="font-semibold text-primary">{title}</h3>
-      <div className="mt-3 text-sm text-white flex-1">
-        {children}
-      </div>
+      <div className="mt-3 text-sm text-white flex-1">{children}</div>
     </div>
   );
 }
