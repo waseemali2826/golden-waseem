@@ -40,7 +40,7 @@ export default function Services() {
 
   return (
     <div className="container mx-auto py-16">
-      <header className="mb-8 text-center">
+      <header className="mb-8 text-center" data-animate>
         <h1 className="font-serif text-3xl text-primary">Services</h1>
         <p className="mt-2 text-muted-foreground">
           Comprehensive services across AI, web, and data to help you ship
