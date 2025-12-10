@@ -452,7 +452,7 @@ export default function Index() {
                   </div>
                   <div className="text-xs text-muted-foreground">Remote</div>
                 </div>
-                <p className="mt-4 text-sm text-muted-foreground flex-1">
+                <p className="mt-4 text-sm text-white flex-1">
                   Delivered end-to-end web applications and APIs for small
                   businesses. Responsibilities included backend API design,
                   frontend implementation with React, and integrating ML
@@ -496,7 +496,7 @@ export default function Index() {
                     Data & Research
                   </div>
                 </div>
-                <p className="mt-4 text-sm text-muted-foreground flex-1">
+                <p className="mt-4 text-sm text-white flex-1">
                   Worked on data pipelines, cleaning and preprocessing datasets,
                   and building prototype models for classification tasks.
                   Assisted in model evaluation and generating visual reports for
@@ -534,7 +534,7 @@ export default function Index() {
                   NFC Institute of Engineering &amp; Fertilizer Research (2023 —
                   2027)
                 </p>
-                <p className="mt-3 text-sm text-muted-foreground flex-1">
+                <p className="mt-3 text-sm text-white flex-1">
                   Focused on statistical modeling, machine learning, and data
                   engineering. Relevant coursework includes Machine Learning,
                   Data Mining, and Database Systems.
@@ -570,7 +570,7 @@ export default function Index() {
                 <p className="mt-1 text-sm text-muted-foreground">
                   Freelance / Personal Projects
                 </p>
-                <p className="mt-3 text-sm text-muted-foreground flex-1">
+                <p className="mt-3 text-sm text-white flex-1">
                   Built full‑stack JavaScript applications using MongoDB,
                   Express, React, and Node.js. Implemented RESTful APIs,
                   responsive UIs, and CI/CD pipelines for production
