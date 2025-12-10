@@ -81,7 +81,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="mt-10 grid gap-8 md:grid-cols-2">
+      <div className="mt-10 grid gap-8 md:grid-cols-2" data-animate>
         <form
           onSubmit={handleSubmit}
           className="rounded-2xl border border-border bg-card/60 p-6"
