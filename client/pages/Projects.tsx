@@ -106,14 +106,6 @@ const projects = [
       demo: "https://chair-web.netlify.app/",
       github: "https://github.com/waseemali2826",
   },
-  {
-    title: "Coffee Bean Project",
-    subtitle: "Coffee e-commerce site with product catalog and smooth design.",
-    tech: ["CSS3", "JavaScript", "E-commerce", "Coffee"],
-    img: "/coffee.webp",
-      demo: "https://cold-coffee-bean.netlify.app/",
-      github: "https://github.com/waseemali2826",
-  },
 ];
 
 export default function Projects() {
