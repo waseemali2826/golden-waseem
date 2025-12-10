@@ -31,7 +31,7 @@ export default function Contact() {
         </p>
       </header>
 
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-3" data-animate>
         <div className="rounded-2xl border border-border bg-card/60 p-6 text-center">
           <h3 className="mt-4 font-semibold text-primary">Email</h3>
           <p className="mt-2 text-sm text-muted-foreground">
