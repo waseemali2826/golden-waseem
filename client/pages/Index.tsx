@@ -258,7 +258,7 @@ export default function Index() {
                   Frontend Engineering
                 </h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">
+              <p className="mt-4 text-sm text-white flex-1">
                 React, TypeScript, component-driven UIs, responsive design, and
                 modern state management.
               </p>
@@ -292,7 +292,7 @@ export default function Index() {
                   Database Management
                 </h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">
+              <p className="mt-4 text-sm text-white flex-1">
                 Design, indexing, migrations, and performance tuning for
                 PostgreSQL, SQL Server and MongoDB.
               </p>
@@ -328,7 +328,7 @@ export default function Index() {
                   API Integration
                 </h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">
+              <p className="mt-4 text-sm text-white flex-1">
                 RESTful APIs, OpenAPI/Swagger, GraphQL basics, third-party
                 integrations and secure data exchange.
               </p>
@@ -360,7 +360,7 @@ export default function Index() {
                   Version Control
                 </h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">
+              <p className="mt-4 text-sm text-white flex-1">
                 Git workflows, branching strategies, CI integrations, code
                 review practices, and release management.
               </p>
@@ -392,7 +392,7 @@ export default function Index() {
                   Performance Optimization
                 </h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">
+              <p className="mt-4 text-sm text-white flex-1">
                 Profiling, caching, query optimization, load testing and
                 front-end performance best practices.
               </p>
