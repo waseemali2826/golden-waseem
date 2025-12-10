@@ -55,6 +55,8 @@ Thanks for considering my application. I'm excited about the possibility of work
 `;
 
 export default function About() {
+  useScrollAnimation();
+
   // Utility: download a Blob with given filename
   function downloadBlob(blob: Blob, filename: string) {
     const url = URL.createObjectURL(blob);
