@@ -15,7 +15,10 @@ export default function NavBar() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between">
-        <Link to="/" className="font-extrabold tracking-wide text-primary text-xl">
+        <Link
+          to="/"
+          className="font-extrabold tracking-wide text-primary text-xl"
+        >
           Waseem Ali
         </Link>
         <nav className="hidden md:flex items-center gap-6">
@@ -26,7 +29,7 @@ export default function NavBar() {
               className={({ isActive }) =>
                 cn(
                   "text-sm font-medium text-muted-foreground hover:text-primary transition-colors",
-                  isActive && "text-primary"
+                  isActive && "text-primary",
                 )
               }
             >
@@ -48,7 +51,7 @@ export default function NavBar() {
                   className={({ isActive }) =>
                     cn(
                       "block rounded px-3 py-2 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground",
-                      isActive && "text-primary"
+                      isActive && "text-primary",
                     )
                   }
                 >

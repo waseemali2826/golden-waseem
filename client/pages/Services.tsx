@@ -39,20 +39,36 @@ export default function Services() {
     <div className="container mx-auto py-16">
       <header className="mb-8 text-center">
         <h1 className="font-serif text-3xl text-primary">Services</h1>
-        <p className="mt-2 text-muted-foreground">Comprehensive services across AI, web, and data to help you ship reliable products.</p>
+        <p className="mt-2 text-muted-foreground">
+          Comprehensive services across AI, web, and data to help you ship
+          reliable products.
+        </p>
       </header>
 
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
         {services.map((s) => (
-          <article key={s.title} className="rounded-2xl border border-border bg-card/60 overflow-hidden shadow hover:shadow-lg transition-shadow flex flex-col">
+          <article
+            key={s.title}
+            className="rounded-2xl border border-border bg-card/60 overflow-hidden shadow hover:shadow-lg transition-shadow flex flex-col"
+          >
             <div className="h-48 w-full bg-gradient-to-br from-primary/10 to-accent/5 flex items-center justify-center overflow-hidden">
-              <img src={s.img} alt={s.title} className="h-full w-full object-cover" />
+              <img
+                src={s.img}
+                alt={s.title}
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="p-6 flex-1 flex flex-col">
               <h3 className="text-lg font-semibold text-primary">{s.title}</h3>
-              <p className="mt-3 text-sm text-muted-foreground flex-1">{s.desc}</p>
+              <p className="mt-3 text-sm text-muted-foreground flex-1">
+                {s.desc}
+              </p>
               <div className="mt-6">
-                <Link to="/contact"><Button variant="outline" size="sm">Get Started</Button></Link>
+                <Link to="/contact">
+                  <Button variant="outline" size="sm">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
           </article>
@@ -60,7 +76,13 @@ export default function Services() {
       </div>
 
       <div className="mt-10 text-center">
-        <p className="text-sm text-muted-foreground">Need something custom? <Link to="/contact" className="text-primary underline">Contact me</Link>.</p>
+        <p className="text-sm text-muted-foreground">
+          Need something custom?{" "}
+          <Link to="/contact" className="text-primary underline">
+            Contact me
+          </Link>
+          .
+        </p>
       </div>
     </div>
   );
