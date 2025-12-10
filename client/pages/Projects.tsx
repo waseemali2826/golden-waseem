@@ -121,7 +121,7 @@ export default function Projects() {
 
   return (
     <div className="container mx-auto py-16">
-      <header className="mb-8 text-center">
+      <header className="mb-8 text-center" data-animate>
         <h1 className="font-serif text-3xl text-primary">Featured Projects</h1>
         <p className="mt-2 text-muted-foreground">Selected projects showcasing web, AI/ML, and data visualization work.</p>
       </header>
