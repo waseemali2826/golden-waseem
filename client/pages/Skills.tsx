@@ -108,7 +108,7 @@ export default function Skills() {
 
   return (
     <div className="container mx-auto py-16">
-      <div className="rounded-2xl border border-border bg-card/60 p-8">
+      <div className="rounded-2xl border border-border bg-card/60 p-8" data-animate>
         <h1 className="font-serif text-3xl text-primary text-center">
           Skills & Expertise
         </h1>
