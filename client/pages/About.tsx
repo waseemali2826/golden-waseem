@@ -117,7 +117,7 @@ export default function About() {
   // Existing return continues below
   return (
     <div className="container mx-auto px-4 py-16">
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-3" data-animate>
         {/* Left: Main content */}
         <div className="md:col-span-2">
           <div
