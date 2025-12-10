@@ -117,6 +117,8 @@ const projects = [
 ];
 
 export default function Projects() {
+  useScrollAnimation();
+
   return (
     <div className="container mx-auto py-16">
       <header className="mb-8 text-center">
