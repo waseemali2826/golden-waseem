@@ -104,6 +104,8 @@ const FAQ_ITEMS = [
 ];
 
 export default function Skills() {
+  useScrollAnimation();
+
   return (
     <div className="container mx-auto py-16">
       <div className="rounded-2xl border border-border bg-card/60 p-8">
