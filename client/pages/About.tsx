@@ -114,18 +114,18 @@ export default function About() {
                 <h2 className="font-semibold text-xl text-primary">Education &amp; Background</h2>
                 <ul className="mt-3 text-sm text-muted-foreground space-y-2">
                   <li>
-                    <strong>BS Data Science</strong> — NFC Institute of Engineering and Fertilizer Research (2023–2027)
+                    <strong>BS Data Science</strong> — <span className="text-white">NFC Institute of Engineering and Fertilizer Research (2023–2027)</span>
                   </li>
                   <li>
-                    <strong>Location:</strong> Pakistan
+                    <strong>Location:</strong> <span className="text-white">Pakistan</span>
                   </li>
                   <li>
-                    <strong>Started Coding Journey:</strong> 2022
+                    <strong>Started Coding Journey:</strong> <span className="text-white">2022</span>
                   </li>
                 </ul>
 
                 <h2 className="mt-6 font-semibold text-xl text-primary">Specialization Focus</h2>
-                <ul className="mt-3 text-sm text-muted-foreground space-y-2">
+                <ul className="mt-3 text-sm text-white space-y-2">
                   <li>Machine Learning</li>
                   <li>Data Science</li>
                   <li>Python Development</li>
@@ -135,12 +135,12 @@ export default function About() {
 
               <div>
                 <h2 className="font-semibold text-xl text-primary">AI / ML &amp; Data Science</h2>
-                <p className="mt-3 text-sm text-muted-foreground">
+                <p className="mt-3 text-sm text-white">
                   Passionate about creating intelligent systems that solve real-world problems. My journey combines data science
                   foundations with cutting-edge AI/ML technologies and development expertise.
                 </p>
 
-                <p className="mt-4 text-sm text-muted-foreground">
+                <p className="mt-4 text-sm text-white">
                   Hands-on experience with data cleaning, exploratory analysis, feature engineering, and building models for
                   classification, regression, and clustering tasks using Python, scikit-learn, TensorFlow, and PyTorch.
                 </p>

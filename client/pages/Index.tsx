@@ -43,7 +43,7 @@ export default function Index() {
             filter: "saturate(110%)",
           }}
         />
-        
+
         <div className="relative container mx-auto px-6 z-10">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="text-center md:text-left">
@@ -73,9 +73,9 @@ export default function Index() {
 
             <div className="mt-12 md:mt-0 flex justify-center">
               <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full overflow-hidden border-4 border-primary/30 shadow-2xl transform transition-transform duration-500 hover:scale-105">
-                <img 
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fe690a34fb9644577a9814872d86f9388%2F97fd4de9a2aa476cba4e151aec9f3b32?format=webp&width=800" 
-                  alt="Waseem Ali" 
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fe690a34fb9644577a9814872d86f9388%2F97fd4de9a2aa476cba4e151aec9f3b32?format=webp&width=800"
+                  alt="Waseem Ali"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -107,21 +107,21 @@ export default function Index() {
       </section>
 
       {/* Professional Summary */}
-      <section className="container mx-auto grid gap-6 py-12 md:grid-cols-4 items-stretch">
-        <div className="md:col-span-4">
+      <section className="container mx-auto grid gap-6 py-12 md:grd-cols-4 items-stretch text-white">
+        <div className="md:col-span-4 text-white">
           <h2 className="font-serif text-2xl text-primary">Professional Summary</h2>
         </div>
         <StatCard title="Specializations">
-          MERN Stack Developer — MongoDB, Express, React, and Node.js. Building full‑stack JavaScript applications with RESTful APIs and modern frontend architectures.
+          <span className="text-white">MERN Stack Developer — MongoDB, Express, React, and Node.js. Building full‑stack JavaScript applications with RESTful APIs and modern frontend architectures.</span>
         </StatCard>
         <StatCard title="Frontend">
-          React, TypeScript, TailwindCSS, component-driven UIs.
+          <span className="text-white">React, TypeScript, TailwindCSS, component-driven UIs.</span>
         </StatCard>
         <StatCard title="Databases">
-          SQL Server, PostgreSQL, schema design & performance tuning.
+          <span className="text-white">SQL Server, PostgreSQL, schema design & performance tuning.</span>
         </StatCard>
         <StatCard title="Availability">
-          Remote-first, open to contract or full‑time roles.
+          <span className="text-white">Remote-first, open to contract or full‑time roles.</span>
         </StatCard>
       </section>
 
@@ -142,7 +142,7 @@ export default function Index() {
                 </div>
                 <h3 className="text-lg font-semibold text-primary">Backend Development</h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">Node.js, Express, ASP.NET Core, microservices, authentication, and scalable server architectures.</p>
+              <p className="mt-4 text-sm text-white flex-1">Node.js, Express, ASP.NET Core, microservices, authentication, and scalable server architectures.</p>
             </div>
 
             <div className="rounded-xl border border-border bg-card/60 p-6 flex flex-col">
@@ -155,7 +155,7 @@ export default function Index() {
                 </div>
                 <h3 className="text-lg font-semibold text-primary">Frontend Engineering</h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">React, TypeScript, component-driven UIs, responsive design, and modern state management.</p>
+              <p className="mt-4 text-sm text-white flex-1">React, TypeScript, component-driven UIs, responsive design, and modern state management.</p>
             </div>
 
             <div className="rounded-xl border border-border bg-card/60 p-6 flex flex-col">
@@ -168,7 +168,7 @@ export default function Index() {
                 </div>
                 <h3 className="text-lg font-semibold text-primary">Database Management</h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">Design, indexing, migrations, and performance tuning for PostgreSQL, SQL Server and MongoDB.</p>
+              <p className="mt-4 text-sm text-white flex-1">Design, indexing, migrations, and performance tuning for PostgreSQL, SQL Server and MongoDB.</p>
             </div>
 
             <div className="rounded-xl border border-border bg-card/60 p-6 flex flex-col">
@@ -181,7 +181,7 @@ export default function Index() {
                 </div>
                 <h3 className="text-lg font-semibold text-primary">API Integration</h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">RESTful APIs, OpenAPI/Swagger, GraphQL basics, third-party integrations and secure data exchange.</p>
+              <p className="mt-4 text-sm text-white flex-1">RESTful APIs, OpenAPI/Swagger, GraphQL basics, third-party integrations and secure data exchange.</p>
             </div>
 
             <div className="rounded-xl border border-border bg-card/60 p-6 flex flex-col">
@@ -194,7 +194,7 @@ export default function Index() {
                 </div>
                 <h3 className="text-lg font-semibold text-primary">Version Control</h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">Git workflows, branching strategies, CI integrations, code review practices, and release management.</p>
+              <p className="mt-4 text-sm text-white flex-1">Git workflows, branching strategies, CI integrations, code review practices, and release management.</p>
             </div>
 
             <div className="rounded-xl border border-border bg-card/60 p-6 flex flex-col">
@@ -207,7 +207,7 @@ export default function Index() {
                 </div>
                 <h3 className="text-lg font-semibold text-primary">Performance Optimization</h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">Profiling, caching, query optimization, load testing and front-end performance best practices.</p>
+              <p className="mt-4 text-sm text-white flex-1">Profiling, caching, query optimization, load testing and front-end performance best practices.</p>
             </div>
 
           </div>
@@ -236,7 +236,7 @@ export default function Index() {
                 </div>
                 <div className="text-xs text-muted-foreground">Remote</div>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">Delivered end-to-end web applications and APIs for small businesses. Responsibilities included backend API design, frontend implementation with React, and integrating ML prototypes into production-ready services.</p>
+              <p className="mt-4 text-sm text-white flex-1">Delivered end-to-end web applications and APIs for small businesses. Responsibilities included backend API design, frontend implementation with React, and integrating ML prototypes into production-ready services.</p>
             </article>
 
             <article className="rounded-xl border border-border bg-card/60 p-6 h-full flex flex-col">
@@ -255,7 +255,7 @@ export default function Index() {
                 </div>
                 <div className="text-xs text-muted-foreground">Data & Research</div>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">Worked on data pipelines, cleaning and preprocessing datasets, and building prototype models for classification tasks. Assisted in model evaluation and generating visual reports for stakeholders.</p>
+              <p className="mt-4 text-sm text-white flex-1">Worked on data pipelines, cleaning and preprocessing datasets, and building prototype models for classification tasks. Assisted in model evaluation and generating visual reports for stakeholders.</p>
             </article>
           </div>
         </div>
@@ -273,7 +273,7 @@ export default function Index() {
                 <h3 className="font-semibold">BSc — Data Science</h3>
               </div>
               <p className="mt-1 text-sm text-muted-foreground">NFC Institute of Engineering &amp; Fertilizer Research (2023 — 2027)</p>
-              <p className="mt-3 text-sm text-muted-foreground flex-1">Focused on statistical modeling, machine learning, and data engineering. Relevant coursework includes Machine Learning, Data Mining, and Database Systems.</p>
+              <p className="mt-3 text-sm text-white flex-1">Focused on statistical modeling, machine learning, and data engineering. Relevant coursework includes Machine Learning, Data Mining, and Database Systems.</p>
             </div>
 
             <div className="rounded-xl border border-border bg-card/60 p-6 h-full flex flex-col">
@@ -287,7 +287,7 @@ export default function Index() {
                 <h3 className="font-semibold">MERN Stack Developer</h3>
               </div>
               <p className="mt-1 text-sm text-muted-foreground">Freelance / Personal Projects</p>
-              <p className="mt-3 text-sm text-muted-foreground flex-1">Built full‑stack JavaScript applications using MongoDB, Express, React, and Node.js. Implemented RESTful APIs, responsive UIs, and CI/CD pipelines for production deployments.</p>
+              <p className="mt-3 text-sm text-white flex-1">Built full‑stack JavaScript applications using MongoDB, Express, React, and Node.js. Implemented RESTful APIs, responsive UIs, and CI/CD pipelines for production deployments.</p>
             </div>
           </div>
         </div>
@@ -322,13 +322,13 @@ export default function Index() {
 
           <div className="mt-6 grid gap-4 grid-cols-3 sm:grid-cols-4 md:grid-cols-7 items-center justify-items-center">
             {[
-              { label: 'Automation', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v4" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 18v4" strokeLinecap="round" strokeLinejoin="round"/><path d="M4.93 4.93l2.83 2.83" strokeLinecap="round" strokeLinejoin="round"/><path d="M16.24 16.24l2.83 2.83" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
-              { label: 'API', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="7" width="18" height="10" rx="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M16 11l3 1-3 1" strokeLinecap="round" strokeLinejoin="round"/><path d="M8 11l-3 1 3 1" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
-              { label: 'DevOps', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 12h6" strokeLinecap="round" strokeLinejoin="round"/><path d="M15 12h6" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 3v6" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 15v6" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
-              { label: 'Versioning', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 5v14" strokeLinecap="round" strokeLinejoin="round"/><path d="M5 12h14" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
-              { label: 'Database', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><ellipse cx="12" cy="6" rx="8" ry="3" strokeLinecap="round" strokeLinejoin="round"/><path d="M4 6v6c0 1.657 3.582 3 8 3s8-1.343 8-3V6" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
-              { label: 'Management', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2a4 4 0 100 8 4 4 0 000-8z" strokeLinecap="round" strokeLinejoin="round"/><path d="M6 22v-2a4 4 0 014-4h4a4 4 0 014 4v2" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
-              { label: 'Monitoring', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 12s2-7 10-7 10 7 10 7-2 7-10 7S2 12 2 12z" strokeLinecap="round" strokeLinejoin="round"/><circle cx="12" cy="12" r="3" strokeLinecap="round" strokeLinejoin="round"/></svg>) },
+              { label: 'Automation', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v4" strokeLinecap="round" strokeLinejoin="round" /><path d="M12 18v4" strokeLinecap="round" strokeLinejoin="round" /><path d="M4.93 4.93l2.83 2.83" strokeLinecap="round" strokeLinejoin="round" /><path d="M16.24 16.24l2.83 2.83" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
+              { label: 'API', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="7" width="18" height="10" rx="2" strokeLinecap="round" strokeLinejoin="round" /><path d="M16 11l3 1-3 1" strokeLinecap="round" strokeLinejoin="round" /><path d="M8 11l-3 1 3 1" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
+              { label: 'DevOps', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M3 12h6" strokeLinecap="round" strokeLinejoin="round" /><path d="M15 12h6" strokeLinecap="round" strokeLinejoin="round" /><path d="M12 3v6" strokeLinecap="round" strokeLinejoin="round" /><path d="M12 15v6" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
+              { label: 'Versioning', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 5v14" strokeLinecap="round" strokeLinejoin="round" /><path d="M5 12h14" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
+              { label: 'Database', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><ellipse cx="12" cy="6" rx="8" ry="3" strokeLinecap="round" strokeLinejoin="round" /><path d="M4 6v6c0 1.657 3.582 3 8 3s8-1.343 8-3V6" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
+              { label: 'Management', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2a4 4 0 100 8 4 4 0 000-8z" strokeLinecap="round" strokeLinejoin="round" /><path d="M6 22v-2a4 4 0 014-4h4a4 4 0 014 4v2" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
+              { label: 'Monitoring', icon: (<svg className="h-8 w-8 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M2 12s2-7 10-7 10 7 10 7-2 7-10 7S2 12 2 12z" strokeLinecap="round" strokeLinejoin="round" /><circle cx="12" cy="12" r="3" strokeLinecap="round" strokeLinejoin="round" /></svg>) },
             ].map((t) => (
               <div key={t.label} className="flex flex-col items-center gap-2">
                 <div className="rounded-xl bg-card p-3 shadow-md border border-border">
