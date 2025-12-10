@@ -226,7 +226,7 @@ export default function Index() {
                   Backend Development
                 </h3>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground flex-1">
+              <p className="mt-4 text-sm text-white flex-1">
                 Node.js, Express, ASP.NET Core, microservices, authentication,
                 and scalable server architectures.
               </p>
