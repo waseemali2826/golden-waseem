@@ -24,7 +24,7 @@ export default function Contact() {
 
   return (
     <div className="container mx-auto py-16">
-      <header className="text-center mb-10">
+      <header className="text-center mb-10" data-animate>
         <h1 className="font-serif text-3xl text-primary">Get In Touch</h1>
         <p className="mt-2 text-muted-foreground">
           Let&apos;s connect — send a message or use the contact details below.
