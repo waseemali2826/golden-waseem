@@ -16,6 +16,8 @@ const certs = [
 ];
 
 export default function Certificates() {
+  useScrollAnimation();
+
   const [active, setActive] = useState<number | null>(null);
 
   return (
