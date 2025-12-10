@@ -54,5 +54,8 @@ const App = () => (
   </QueryClientProvider>
 );
 
-const root = createRoot(document.getElementById("root")!);
-root.render(<App />);
+const rootElement = document.getElementById("root");
+if (rootElement && !rootElement._reactRootContainer) {
+  const root = createRoot(rootElement);
+  root.render(<App />);
+}
