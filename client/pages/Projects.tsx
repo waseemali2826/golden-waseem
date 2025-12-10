@@ -126,7 +126,7 @@ export default function Projects() {
         <p className="mt-2 text-muted-foreground">Selected projects showcasing web, AI/ML, and data visualization work.</p>
       </header>
 
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" data-animate>
         {projects.map((p) => (
           <article key={p.title} className="rounded-2xl border border-border bg-card/60 overflow-hidden shadow hover:shadow-lg transition-shadow flex flex-col">
             <div className="w-full bg-gradient-to-br from-primary/10 to-accent/5 flex items-center justify-center p-0 overflow-hidden" style={{ aspectRatio: '16/9' }}>
