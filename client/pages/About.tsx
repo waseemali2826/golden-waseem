@@ -1,4 +1,5 @@
 import React from "react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const RESUME_TEXT = `WASEEM ALI
  Email: Waseem38650@gmail.com | phone no: 03100071886
