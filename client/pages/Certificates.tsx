@@ -27,7 +27,7 @@ export default function Certificates() {
         <p className="mt-2 text-muted-foreground">Verified certificates and course achievements. Click the image to preview.</p>
       </header>
 
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3" data-animate>
         {certs.map((c, idx) => (
           <article key={c.title} className="rounded-2xl border border-border bg-card/60 overflow-hidden shadow hover:shadow-lg transition-shadow flex flex-col">
             <div
