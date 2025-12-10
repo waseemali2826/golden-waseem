@@ -54,12 +54,12 @@ const App = () => (
   </QueryClientProvider>
 );
 
-let root: ReturnType<typeof createRoot> | null = null;
-
 const rootElement = document.getElementById("root");
 if (rootElement) {
-  if (!root) {
-    root = createRoot(rootElement);
+  // Store root on window to persist across HMR
+  const win = window as any;
+  if (!win.__appRoot) {
+    win.__appRoot = createRoot(rootElement);
   }
-  root.render(<App />);
+  win.__appRoot.render(<App />);
 }
