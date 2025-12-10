@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const certs = [
   { title: "Human Resource Management", subtitle: "HR Management", img: "/HR.webp" },
