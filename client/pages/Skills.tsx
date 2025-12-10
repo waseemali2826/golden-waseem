@@ -155,7 +155,7 @@ export default function Skills() {
                 <AccordionItem key={f.q} value={`item-${idx}`}>
                   <AccordionTrigger>{f.q}</AccordionTrigger>
                   <AccordionContent>
-                    <p className="text-sm text-muted-foreground">{f.a}</p>
+                    <p className="text-sm text-white">{f.a}</p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
