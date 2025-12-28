@@ -142,14 +142,11 @@ export default function Projects() {
             key={p.title}
             className="rounded-2xl border border-border bg-card/60 overflow-hidden shadow hover:shadow-lg transition-shadow flex flex-col"
           >
-            <div
-              className="w-full bg-gradient-to-br from-primary/10 to-accent/5 flex items-center justify-center p-0 overflow-hidden"
-              style={{ aspectRatio: "16/9" }}
-            >
+            <div className="w-full bg-gradient-to-br from-primary/10 to-accent/5 flex items-center justify-center p-0 overflow-hidden">
               <img
                 src={p.img}
                 alt={p.title}
-                className="w-full h-full object-cover"
+                className="w-full h-48 sm:h-56 md:h-64 object-cover"
                 loading="lazy"
               />
             </div>
