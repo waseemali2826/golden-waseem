@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const projects = [
   {
@@ -122,21 +121,16 @@ const projects = [
 ];
 
 export default function Projects() {
-  useScrollAnimation();
-
   return (
     <div className="container mx-auto py-16">
-      <header className="mb-8 text-center" data-animate>
+      <header className="mb-8 text-center">
         <h1 className="font-serif text-3xl text-primary">Featured Projects</h1>
         <p className="mt-2 text-muted-foreground">
           Selected projects showcasing web, AI/ML, and data visualization work.
         </p>
       </header>
 
-      <div
-        className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-        data-animate
-      >
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {projects.map((p) => (
           <article
             key={p.title}
