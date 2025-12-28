@@ -140,7 +140,7 @@ export default function Projects() {
               <img
                 src={p.img}
                 alt={p.title}
-                className="w-full h-auto object-cover"
+                className="w-full h-48 object-cover"
                 loading="lazy"
               />
             </div>
