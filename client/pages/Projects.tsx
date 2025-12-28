@@ -118,6 +118,15 @@ const projects = [
     demo: "https://chair-web.netlify.app/",
     github: "https://github.com/waseemali2826",
   },
+  {
+    title: "Stackhunts",
+    subtitle:
+      "Comprehensive Learning Management System with admin dashboard for managing students, courses, admissions, and financial analytics.",
+    tech: ["React", "Node.js", "MongoDB", "Express"],
+    img: "/stackhunts-lms.webp",
+    demo: "https://skills-portal.netlify.app/",
+    github: "https://github.com/waseemali2826",
+  },
 ];
 
 export default function Projects() {
